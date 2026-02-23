@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bungee&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-display: "Bungee", cursive;
+  --color-primary: #FF4D4D; /* Vibrant Red */
+  --color-secondary: #FFD700; /* Gold/Yellow */
+  --color-bg: #FFF500; /* Bright Yellow */
+  --color-ink: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-bg text-ink;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border: 2px solid var(--color-bg);
+  border-radius: 10px;
+}
